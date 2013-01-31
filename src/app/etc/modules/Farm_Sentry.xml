@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <Farm_Sentry>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Farm_Sentry>
+    </modules>
+</config>

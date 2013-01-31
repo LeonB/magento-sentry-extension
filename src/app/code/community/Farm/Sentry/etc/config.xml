@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Farm_Sentry>
+            <version>1.0.0</version>
+        </Farm_Sentry>
+    </modules>
+    <global>
+        <models>
+            <sentry>
+                <class>Farm_Sentry_Model</class>
+            </sentry>
+        </models>
+        <events>
+            <exception>
+                <observers>
+                    <sentry_exception>
+                        <type>singleton</type>
+                        <class>sentry/observer</class>
+                        <method>logException</method>
+                    </sentry_exception>
+                </observers>
+            </exception>
+        </events>
+    </global>
+    <default>
+        <dev>
+            <sentry>
+                <active>false</active>
+                <dsn>http://public:secret@sentry.example.com:9000/[PROJECT_ID]</dsn>
+            </sentry>
+        </dev>
+    </default>
+</config>
